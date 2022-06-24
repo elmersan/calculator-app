@@ -1,0 +1,53 @@
+.header {
+  padding-block: 2rem;
+}
+
+.theme {
+  gap: 4rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.active-theme-2 {
+  transform: translate(2.3rem, 0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.active-theme-3 {
+  transform: translate(5rem, 0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.switch-content {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.switch-toggle {
+  background-color: var(--toggle-background);
+  border-radius: 50px;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+ul {
+  padding-inline: 1rem;
+}
+
+h4 {
+  margin: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+}
+
+li {
+  font-size: 1.2rem;
+}
+
+.switch {
+  height: 1.7rem;
+  width: 1.7rem;
+  border-radius: 50%;
+  background-color: var(--key-background-toggle);
+  transition: transform 0.3s ease-in-out;
+}
