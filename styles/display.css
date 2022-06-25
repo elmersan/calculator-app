@@ -1,0 +1,13 @@
+.display input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  background-color: var(--screen-background);
+  border-radius: 1rem;
+  font-size: 3.8rem;
+  width: 100%;
+  color: var(--text-white);
+  font-family: 'League Spartan', sans-serif;
+  padding: 2.5rem;
+  text-align: right;
+}

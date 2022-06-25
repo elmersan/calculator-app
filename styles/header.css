@@ -24,7 +24,6 @@
 }
 
 .switch-toggle {
-  background-color: var(--toggle-background);
   border-radius: 50px;
   width: 100%;
   padding: 0.5rem;
@@ -48,6 +47,5 @@ li {
   height: 1.7rem;
   width: 1.7rem;
   border-radius: 50%;
-  background-color: var(--key-background-toggle);
   transition: transform 0.3s ease-in-out;
 }

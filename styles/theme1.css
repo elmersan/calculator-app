@@ -11,3 +11,11 @@
   --text-grayish-blue: hsl(221, 14%, 31%);
   
 }
+
+.switch-toggle {
+  background-color: var(--toggle-background);
+}
+
+.switch {
+  background-color: var(--key-background-toggle);
+}

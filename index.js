@@ -25,8 +25,11 @@ window.addEventListener("DOMContentLoaded", load);
 
 const btn_toggle = document.querySelector("#btn-content");
 const btn_switch = document.querySelector("#btn-switch");
+const display = document.querySelector("#display");
+const numbers = document.querySelectorAll("#number");
 let count = 0;
 
+// theme toggle button
 btn_toggle.addEventListener("click", () => {
   count++;
   if (count === 1) {
@@ -40,3 +43,37 @@ btn_toggle.addEventListener("click", () => {
   }
   console.log(count);
 });
+
+// display number format
+// input_number.addEventListener("keyup", (e) => {
+//   console.log(input_number.value);
+//   console.log(new Intl.NumberFormat("es-MX").format(input_number.value));
+
+//   const number = new Intl.NumberFormat("es-MX").format(input_number.value);
+
+//   input_number.value = number;
+// });
+
+if (numbers.length > 0) {
+  numbers.forEach((number) => {
+    number.addEventListener("click", (e) => {
+      display.value += e.target.ariaValueText;
+      cursorEnd();
+    });
+  });
+}
+
+function cursorEnd() {
+  let length = display.value.length;
+
+  if (display.setSelectionRange) {
+    display.focus();
+    display.setSelectionRange(length, length);
+  } else if (display.createTextRange) {
+    let t = display.createTextRange();
+    t.collapse(true);
+    t.moveEnd("character", length);
+    t.moveStart("character", length);
+    t.select;
+  }
+}
