@@ -1,3 +1,16 @@
+.display {
+  position: relative;
+}
+
+.display span {
+  color: var(--key-background-r-d);
+  font-size: 1.4rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
+}
+
 .display input {
   background-color: transparent;
   border: none;

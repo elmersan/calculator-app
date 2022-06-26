@@ -26,8 +26,20 @@ window.addEventListener("DOMContentLoaded", load);
 const btn_toggle = document.querySelector("#btn-content");
 const btn_switch = document.querySelector("#btn-switch");
 const display = document.querySelector("#display");
-const numbers = document.querySelectorAll("#number");
+const numbers = document.querySelectorAll(".number");
+const del = document.getElementById("del");
+
+const sum = document.getElementById("sum");
+const multiplication = document.getElementById("multiplication");
+const subtract = document.getElementById("subtract");
+const division = document.getElementById("division");
+
+const equal = document.getElementById("equal");
+
+const operationDisplay = document.getElementById("operationDisplay");
+
 let count = 0;
+let countPoint = 0;
 
 // theme toggle button
 btn_toggle.addEventListener("click", () => {
@@ -54,10 +66,32 @@ btn_toggle.addEventListener("click", () => {
 //   input_number.value = number;
 // });
 
+console.log(new Intl.NumberFormat().format(46787.45));
+
 if (numbers.length > 0) {
   numbers.forEach((number) => {
     number.addEventListener("click", (e) => {
-      display.value += e.target.ariaValueText;
+      let newNumber;
+
+      if (display.value.length === 0 && e.target.innerText === ".") return;
+
+      if (e.target.innerText === "." && countPoint < 1) {
+        display.value += e.target.innerText;
+        countPoint++;
+      } else if (e.target.innerText !== ".") {
+        display.value += e.target.innerText;
+        console.log(parseFloat(display.value));
+        newNumber = display.value.replace(/,/g, "");
+        // newNumber = parseFloat(display.value);
+
+        console.log(newNumber);
+        const number = new Intl.NumberFormat("es-MX").format(newNumber);
+
+        display.value = number;
+      } else {
+        return;
+      }
+
       cursorEnd();
     });
   });
@@ -77,3 +111,36 @@ function cursorEnd() {
     t.select;
   }
 }
+
+function addOperation(operation) {
+  operationDisplay.innerHTML =
+    operationDisplay.innerText + " " + display.value + operation;
+  display.value = "";
+}
+
+del.addEventListener("click", () => {
+  display.value = display.value.substring(0, display.value.length - 1);
+});
+
+// OPERATIONS
+sum.addEventListener("click", () => {
+  addOperation(" + ");
+});
+
+multiplication.addEventListener("click", () => {
+  addOperation(" x ");
+});
+
+subtract.addEventListener("click", () => {
+  addOperation(" - ");
+});
+
+division.addEventListener("click", () => {
+  addOperation(" / ");
+});
+
+equal.addEventListener("click", () => {
+  operationDisplay.innerHTML = operationDisplay.innerText + " " + display.value;
+  const newOperation = operationDisplay.innerHTML.replace(/x/g, "*");
+  display.value = eval(newOperation);
+});
