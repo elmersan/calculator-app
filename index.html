@@ -11,74 +11,68 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
 
+  <link id="theme" rel="stylesheet" href="./styles/theme1.css">
   <link rel="stylesheet" href="./styles/main.css">
 
   <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
   <div class="calculator">
     <div class='wrapper'>
-      <!-- <button class='btn'>Toggle mode</button> -->
-      <header class="header flex">
-        <h1>calc</h1>
-        <div class="theme">
-          <h4>THEME</h4>
-          <div class="switch-content flex">
-            <ul class="flex">
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-            </ul>
-            <div id="btn-content" class="switch-toggle">
-              <div id="btn-switch" class="switch"></div>
+      <div class="content-calculator">
+        <header class="header flex">
+          <h1>calc</h1>
+          <div class="theme">
+            <h4>THEME</h4>
+            <div class="switch-content flex">
+              <ul class="flex">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+              <div id="btn-content" class="switch-toggle">
+                <div id="btn-switch" class="switch"></div>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
-
-      <form class="display">
-        <span class="operation" id="operationDisplay"></span>
-        <input type="text" id="display" placeholder="" readonly/>
-      </form>
-
-      <div class="numerical-board">
-        <div>
-          <button type="button" class="number" >7</button>
-          <button type="button" class="number" >8</button>
-          <button type="button" class="number" >9</button>
-          <button type="button" class="delete" id="del">DEL</button>
-          <button type="button" class="number" >4</button>
-          <button type="button" class="number" >5</button>
-          <button type="button" class="number" >6</button>
-          <button type="button" id="sum" >+</button>
-          <button type="button" class="number" >1</button>
-          <button type="button" class="number" >2</button>
-          <button type="button" class="number" >3</button>
-          <button type="button" id="subtract" >-</button>
-          <button type="button" class="number" >.</button>
-          <button type="button" class="number" >0</button>
-          <button type="button" id="division" >/</button>
-          <button type="button" id="multiplication" >x</button>
-          <button type="button" id="reset" class="reset">RESET</button>
-          <button type="button" id="equal"  class="equal">=</button>
+        </header>
+  
+        <form class="display">
+          <span class="operation" id="operationDisplay"></span>
+          <input type="text" id="display" placeholder="" readonly/>
+        </form>
+  
+        <div class="numerical-board">
+          <div>
+            <button type="button" class="number" >7</button>
+            <button type="button" class="number" >8</button>
+            <button type="button" class="number" >9</button>
+            <button type="button" class="delete" id="del">DEL</button>
+            <button type="button" class="number" >4</button>
+            <button type="button" class="number" >5</button>
+            <button type="button" class="number" >6</button>
+            <button type="button" id="sum" >+</button>
+            <button type="button" class="number" >1</button>
+            <button type="button" class="number" >2</button>
+            <button type="button" class="number" >3</button>
+            <button type="button" id="subtract" >-</button>
+            <button type="button" class="number" >.</button>
+            <button type="button" class="number" >0</button>
+            <button type="button" id="division" >/</button>
+            <button type="button" id="multiplication" >x</button>
+            <button type="button" id="reset" class="reset">RESET</button>
+            <button type="button" id="equal"  class="equal">=</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-
-  
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Elmer San</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/elmersan" target="_blank">Elmer San</a>.
   </footer>
 
   <script src="./index.js"></script>

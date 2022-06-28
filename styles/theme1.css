@@ -1,15 +1,72 @@
-.theme1 {
-
+:root {
   /* backgrounds */
 
   --main-background: hsl(222, 26%, 31%);
   --screen-background: hsl(224, 36%, 15%);
   --toggle-background: hsl(223, 31%, 20%);
 
+  /* keys */
+  --key-background-r-d: hsl(225, 21%, 49%);
+  --key-shadow-r-d: hsl(224, 28%, 35%);
+
+  --key-background-toggle: hsl(6, 63%, 50%);
+  --key-shadow-equal: hsl(6, 70%, 34%);
+
+  --key-background-number: hsl(30, 25%, 89%);
+  --key-shadow-number: hsl(28, 16%, 65%);
+
+
   /* text */
-  --text-white: hsl(0, 0, 100%);
-  --text-grayish-blue: hsl(221, 14%, 31%);
-  
+
+  --text-white: hsl(0, 0%, 100%);
+  --text-number: hsl(221, 14%, 31%);
+}
+
+body{
+  background-color: var(--main-background);
+  color: var(--text-white);
+}
+
+
+
+h1,a {
+  color: var(--text-white);
+}
+
+.display {
+  position: relative;
+}
+
+.display span {
+  color: var(--key-background-r-d);
+}
+
+.display input {
+  background-color: var(--screen-background);
+  color: var(--text-white);
+}
+
+.numerical-board {
+  background-color: var(--toggle-background);
+}
+
+.numerical-board div button {
+  background-color: var(--key-background-number);
+  color: var(--text-number);
+  box-shadow: inset 0px -5px var(--key-shadow-number);
+}
+
+.numerical-board div button.reset,
+.numerical-board div button.delete {
+  background-color: var(--key-background-r-d);
+  box-shadow: inset 0px -5px var(--key-shadow-r-d);
+  color: var(--text-white);
+}
+
+.numerical-board div button.equal {
+  background-color: var(--key-background-toggle);
+  color: var(--text-white);
+  box-shadow: inset 0px -5px var(--key-shadow-equal);
 }
 
 .switch-toggle {

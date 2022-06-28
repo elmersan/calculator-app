@@ -4,3 +4,8 @@
   padding-inline-start: 3rem;
   margin: auto;
 }
+
+.content-calculator {
+  margin: 0 auto;
+  max-inline-size: 50rem;
+}

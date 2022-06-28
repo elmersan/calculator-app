@@ -1,34 +1,7 @@
-@import url('buttons.css');
-@import url('theme2.css');
-@import url('theme1.css');
 @import url('header.css');
 @import url('wrapper.css');
 @import url('display.css');
 @import url('numerical-board.css');
-
-:root {
-  /* backgrounds */
-
-  --main-background: hsl(222, 26%, 31%);
-  --screen-background: hsl(224, 36%, 15%);
-  --toggle-background: hsl(223, 31%, 20%);
-
-  /* keys */
-  --key-background-r-d: hsl(225, 21%, 49%);
-  --key-shadow-r-d: hsl(224, 28%, 35%);
-
-  --key-background-toggle: hsl(6, 63%, 50%);
-  --key-shadow-equal: hsl(6, 70%, 34%);
-
-  --key-background-number: hsl(30, 25%, 89%);
-  --key-shadow-number: hsl(28, 16%, 65%);
-
-
-  /* text */
-
-  --text-white: hsl(0, 0%, 100%);
-  --text-number: hsl(221, 14%, 31%);
-}
 
 html {
   font-family: 'League Spartan', sans-serif;
@@ -39,6 +12,7 @@ button {
   font-family: 'League Spartan', sans-serif;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 html {
@@ -49,8 +23,6 @@ html {
 }
 
 body {
-  background-color: var(--main-background);
-  color: var(--text-white);
   padding: 0;
   margin: 0;
 }
@@ -61,7 +33,6 @@ ul{
 }
 
 h1 {
-  color: var(--text-white);
   font-size: 3rem;
 }
 
@@ -81,4 +52,10 @@ li{
 
 .gap-1 {
   gap: 1rem;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  padding-block: 4rem; 
 }

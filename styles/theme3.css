@@ -1,25 +1,26 @@
 :root {
   /* backgrounds */
 
-  --main-background: hsl(0, 0%, 90%);
-  --screen-background: hsl(0, 0%, 93%);
-  --toggle-background: hsl(0, 5%, 81%);
+  --main-background: hsl(268, 75%, 9%);
+  --screen-background: hsl(268, 71%, 12%);
+  --toggle-background: hsl(268, 71%, 12%);
 
   /* keys */
-  --key-background-r-d: hsl(185, 42%, 37%);
-  --key-shadow-r-d: hsl(185, 58%, 25%);
+  --key-background-r-d: hsl(281, 89%, 26%);
+  --key-shadow-r-d: hsl(285, 91%, 52%);
 
-  --key-background-toggle: hsl(25, 98%, 40%);
-  --key-shadow-equal: hsl(25, 99%, 27%);
+  --key-background-toggle: hsl(176, 100%, 44%);
+  --key-shadow-equal: hsl(177, 92%, 70%);
 
-  --key-background-number: hsl(45, 7%, 89%);
-  --key-shadow-number: hsl(35, 11%, 61%);
+  --key-background-number: hsl(268, 47%, 21%);
+  --key-shadow-number: hsl(290, 70%, 36%);
 
 
   /* text */
 
   --text-white: hsl(0, 0%, 100%);
-  --text-number: hsl(60, 10%, 19%);
+  --text-number: hsl(52, 100%, 62%);
+  --text-dark-blue: hsl(198, 20%, 13%);
 }
 
 body{

@@ -1,7 +1,6 @@
 .numerical-board {
   margin-block: 2rem;
   border-radius: 1rem;
-  background-color: var(--toggle-background);
   padding: 2rem;
 }
 
@@ -17,31 +16,31 @@
 
 .numerical-board div button {
   font-size: 3.2rem;
-  background-color: var(--key-background-number);
-  color: var(--text-number);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0px -5px var(--key-shadow-number);
 }
 
 .numerical-board div button.reset,
 .numerical-board div button.delete {
-  background-color: var(--key-background-r-d);
-  box-shadow: inset 0px -5px var(--key-shadow-r-d);
-  color: var(--text-white);
   font-size: 2rem;
-}
-
-.numerical-board div button.equal {
-  background-color: var(--key-background-toggle);
-  color: var(--text-white);
-  box-shadow: inset 0px -5px var(--key-shadow-equal);
 }
 
 .reset,
 .equal {
   grid-area: 5 / span 2;
+}
+
+@media only screen and (min-width: 450px) {
+  .numerical-board div {
+    grid-template-columns: repeat( auto-fit, minmax(7rem,1fr) );
+  }
+}
+
+@media only screen and (min-width: 515px) {
+  .numerical-board div {
+    grid-template-columns: repeat( auto-fit, minmax(9rem,1fr) );
+  }
 }
